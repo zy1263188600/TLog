@@ -28,7 +28,7 @@ public class LogbackBytesEnhance {
         }
 
         LoggingEvent le = new LoggingEvent(localFQCN, thisObj, level, resultLog, t, params);
-        le.setMarker(marker);
+//        le.setMarker(marker);
         thisObj.callAppenders(le);
     }
 }

@@ -22,6 +22,10 @@ public class TLogRPCHandler {
     protected static final Logger log = LoggerFactory.getLogger(TLogRPCHandler.class);
 
     public void processProviderSide(TLogLabelBean labelBean) {
+
+//        LoggerContext loggerContext = ((ch.qos.logback.classic.Logger) log).getLoggerContext();
+//        loggerContext.setMDCAdapter(MDC.getMDCAdapter());
+
         if (StringUtils.isBlank(labelBean.getPreIvkApp())) {
             labelBean.setPreIvkApp(TLogConstants.UNKNOWN);
         }

@@ -4,6 +4,7 @@ import com.alibaba.ttl.TransmittableThreadLocal;
 import org.slf4j.spi.MDCAdapter;
 
 import java.util.Collections;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -128,6 +129,25 @@ public class TLogLogbackTTLMdcAdapter implements MDCAdapter {
         } else {
             return new HashMap<>(hashMap);
         }
+    }
+
+    @Override
+    public void pushByKey(String s, String s1) {
+    }
+
+    @Override
+    public String popByKey(String s) {
+        return null;
+    }
+
+    @Override
+    public Deque<String> getCopyOfDequeByKey(String s) {
+        return null;
+    }
+
+    @Override
+    public void clearDequeByKey(String s) {
+        System.out.println("TLogLogbackTTLMdcAdapter.clearDequeByKey");
     }
 
     @SuppressWarnings("unchecked")
